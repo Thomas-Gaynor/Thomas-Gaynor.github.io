@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+
+
+:root{
+
+  --backColor: #2a6e87;
+  --darkBackColor: #38606e;
+
+}
+
+@-webkit-keyframes color {
+  from {color: red;}
+  to {color: yellow;}
+}
+
+/* Standard syntax */
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  font-family: 'PT Sans', 'Oxygen', sans-serif, Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+.nav {
+	z-index: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 70%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.nav:not(.navScrolled){
+  background-color: rgba(0,0,0,0);
+  color: #dddddd;
+}
+
+.navScrolledBack{
+  animation-name: navScrolledToNav;
+  animation-duration: 0.5s;
+  -webkit-animation-name: navScrolledToNav;
+  -webkit-animation-duration: 0.5s;
+}
+
+.navScrolled {
+  background-color: rgba(255,255,255,1);
+  color: #000000;
+  animation-name: navToNavScrolled;
+  animation-duration: 0.5s;
+  -webkit-animation-name: navToNavScrolled;
+  -webkit-animation-duration: 0.5s;
+  position: fixed;
+  z-index: 100;
+}
+
+.navOp {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 1.1em;
+}
+
+@keyframes navToNavScrolled {
+  0%   {background-color:rgba(0,0,0,0); color: #dddddd;}
+  100% {background-color:rgba(255,255,255,1); color: #000000;}
+}
+
+@-webkit-keyframes navToNavScrolled {
+  0%   {background-color:rgba(0,0,0,0); color: #dddddd;}
+  100% {background-color:rgba(255,255,255,1); color: #000000;}
+}
+
+@keyframes navScrolledToNav {
+  0% {background-color:rgba(255,255,255,1); color: #000000;}
+  100%   {background-color:rgba(0,0,0,0); color: #dddddd;}
+}
+
+@-webkit-keyframes navScrolledToNav{
+  0% {background-color:rgba(255,255,255,1); color: #000000;}
+  100%   {background-color:rgba(0,0,0,0); color: #dddddd;}
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.nav:not(.navScrolled) .navOp a {
+  text-decoration: none;
+  color: inherit;
+  font: bold;
+}
+
+.navScrolled .navOp a {
+  text-decoration: none;
+
+  color: inherit;
+  font: bold;
+}
+
+.nav:not(.navScrolled) .navOp a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.navScrolled .navOp a:hover {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+/* HEADER CONTENT FROM HERE ON, YOU HAVE BEEN WARNED */
+
+@keyframes testingWhatDisLookLike {
+  0%    {background-position: 0% 0%};
+  100%  {background-position: 0% 100%};
+}
+
+@-webkit-keyframes navScrolledToNav{
+  0% {background-color:rgba(255,255,255,1); color: #000000;}
+  100%   {background-color:rgba(0,0,0,0); color: #dddddd;}
+}
+
+
+.header {
+  /*grid-area: header;*/
+  z-index: -1;
+  top:0px;
+
+  background-color: #f1f1f1;
+  text-align: center;
+
+  background-image: linear-gradient(to bottom,
+     rgba(0,0,255,0.2) 15%, rgba(0,60,122,0.3) 85%)
+     /*linear-gradient(to bottom,
+     rgba(255,0,0,0.3) 15%, rgba(255, 170, 0, 0.3) 25% 35%, rgba(255,255,0,0.3) 45% 55%, rgba(0,255,0,0.3) 65% 75%, rgba(0,0,255,0.3) 85%)/*linear-gradient(rgba(255,69,0, 0.3) 0px 0px, rgba(58, 92, 244, 0.3) 100% 100%)*/, url(../images/background.jpg);
+  animation-name: testingWhatDisLookLike;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: testingWhatDisLookLike;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#titleDiv{
+
+  padding-top: 33vh;
+  position: relative;
+  z-index: 1;
+
+}
+
+#titleHeader{
+  color: white;
+  font-size: 5em;
+  margin: 0px;
+}
+
+#titleDivider{
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 6vw;
+  border-bottom: 4px solid var(--backColor);
+  padding: 0px;
+  text-align: center;
+  position: relative;
+
+
+}
+
+#canvas{
+
+  width: 100%;
+  height: 100%;
+
+}
+
+#canvasDiv{
+
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 30vw;
+
+}
+
+#titleText{
+  color: white;
+  font-size: 1.2em;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.button{
+
+	margin-top: 3em;
+
+}
+
+.button a{
+
+	font-size: 2em;
+	text-decoration: none;
+	padding: 20px 20px;
+	color: white;
+	/*background-color: #7851a9;*/
+	/*background-color: rgba(120, 85, 185, 0.4);*/
+	background-color: rgba(120, 140, 200, 1);
+	border-radius: 40px;
+
+}
+
+
+
+/*Generalised main segment*/
+
+.mainSecBlue{
+
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: var(--backColor);
+  position: relative;
+  z-index: 1;
+
+
+
+}
+
+.mainSecWhite{
+
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+
+}
+
+.centeredDiv{
+
+  text-align: center;
+
+}
+
+.displayImage{
+
+  width: 30%;
+
+}
+
+.sectionIntro{
+	padding: 10px;
+}
+
+.introTag{
+	color: #333333;
+	border-bottom: 2px solid #333333;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* Section One */
+
+.sub-title{
+
+  text-align: center;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+}
+
+.sub-title-header{
+
+  margin: 10px;
+  font-size: 40px;
+
+}
+
+.sub-title-text{
+
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: justify;
+  text-align-last: center;
+
+}
+
+.sub-title-divider{
+
+  border-bottom: 4px solid white;
+  width: 4vw;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+/* Grid container */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: space-evenly;
+
+  padding: 10px;
+  grid-gap: 20px;
+  margin: auto;
+}
+
+.grid-item-title{
+
+  color: #eeeeee;
+
+}
+
+@media screen and (max-width: 1500px) {
+  .grid-container{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid-container{
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+.grid-item {
+  background-color: var(--darkBackColor);
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.grid-item:hover {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: shadow;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: shadow;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: var(--backColor);
+overflow: hidden;
+width: 100%;
+height: 0;
+transition: .5s ease;
+}
+
+.grid-item:hover .grid-item-overlay {
+height: 100%;
+}
+
+
+
+.grid-item-overlay-content {
+/*white-space: nowrap; */
+color: white;
+font-size: 20px;
+position: relative;
+overflow: hidden;
+margin: 0% 5%;
+width: 90%;
+height: 90%;
+top: 50%;
+left: 45%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+}
+
+.grid-item-overlay-content-header{
+
+  margin: 3% 10%;
+  font-size: 18px;
+
+}
+
+.grid-item-overlay-content-body{
+
+  margin: 0% 0%;
+  font-size: 14px;
+  text-align: justify;
+  position: ;
+
+}
+
+.grid-item-overlay-content-descr{
+
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: justify;
+  position: ;
+
+}
+
+@keyframes shadow {
+  0%    {box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);};
+  100%  {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);};
+}
+
+@-webkit-keyframes shadow{
+  0%    {box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);};
+  100%  {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);};
+}
+
+
+.grid-item-header{
+  height: 12em;
+	width: 100%;
+	object-fit: cover;
+}
+
+.grid-item-title{
+
+	text-align: center;
+	margin: 10px;
+	font-weight: normal;
+	font-size: 20px
+
+}
+
+.grid-item-header-image img{
+
+	width: 20%;
+	height: 20%;
+	overflow: hidden;
+
+}
+
+.blueBackLink{
+
+  text-decoration: none;
+  color: #4aaef7;
+
+}
